@@ -37,7 +37,7 @@ public partial class MeetingAppContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=meetingApp;Username=postgres;Password=1234");
+        => optionsBuilder.UseNpgsql("Host=localhost.localdomain;Port=5432;Database=meetingApp;Username=postgres;Password=Hui20CMzalUpa");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

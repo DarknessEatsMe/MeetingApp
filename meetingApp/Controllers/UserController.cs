@@ -232,14 +232,14 @@ namespace meetingApp.Controllers
             return NotFound();
         }
 
-        public IActionResult SendMsg(int uId, int chatId, string message)
+        public IActionResult SendMsg(int uId, int chatId, string? message)
         {
             using(MeetingAppContext db = new MeetingAppContext())
             {
                 Message msg = new Message();
                 msg.ChatId = chatId;
                 msg.IdUser = uId;
-                msg.Msg = message;
+                msg.Msg = message ?? "";
                 msg.MsgDate = DateTime.Now;
 
                 db.Messages.Add(msg);
