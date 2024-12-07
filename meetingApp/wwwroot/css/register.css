@@ -1,0 +1,108 @@
+﻿body {
+    background-color: #11111F;
+}
+.form {
+    display: flex;
+    color: #ffffff;
+    background-color: #ff8ad6;
+    justify-content: center;
+    width: 800px;
+    height: 500px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    padding: 20px;
+    margin: 10px 0 10px 0;
+    border-radius: 40px;
+    font-size: 25px;
+}
+
+.choosePh, .login, .passw, .passw2, .Fname, .name, .Oname, .sex, .gender, .birth, .email, .phone, .city, .about {
+}
+
+.city{
+    margin-top:15px;
+    margin-bottom:20px;
+}
+.birthI, .cityI{
+    margin-top:10px;
+}
+
+.flex {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #767676;
+}
+.noStyle {
+    border: none;
+    padding: 0;
+    border-radius:0;
+}
+
+label{
+    font-weight:800;
+}
+
+.Fname{
+    margin-top:10px;
+}
+select {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight:800;
+    width:65%;
+    padding:5px;
+    border-radius:10px;
+}
+.select2 {
+    width: 50%;
+}
+option {
+    font-weight: 800;
+}
+textarea{
+    width:65%;
+    padding:5px;
+    border-radius:5px;
+}
+#btn {
+    color: #11111F;
+    background-color: white;
+    width: 40%;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#subm {
+    color: #11111F;
+    background-color: white;
+    width: 65%;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+}
+#btn, #subm:hover {
+    background-color: #e6e6e6;
+}

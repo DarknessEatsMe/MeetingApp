@@ -1,0 +1,133 @@
+body {
+    background: #fff1e6;
+    max-width: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    background: #11111F;
+}
+
+/*картинки*/
+.round-image {
+    width: 120px; /* Укажите желаемую ширину */
+    height: 120px; /* Укажите желаемую высоту */
+    border-radius: 50%; /* Создаем круглую форму */
+    overflow: hidden; /* Скрываем выходящие за пределы круга части изображения */
+}
+
+    .round-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Сохраняем пропорции изображения и обрезаем его, чтобы оно полностью заполнило круг */
+    }
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 25px;
+    border-bottom: 2px solid black;
+    padding: 20px 0 25px 0;
+    color: #11111F;
+    background: #ff8ad6;
+    font-weight: 900;
+}
+
+/*Кнопка чаты*/
+.chats {
+    text-decoration: none;
+    color: #ff8ad6;
+    font-weight:700;
+}
+
+    .chats:hover {
+        background-color: #e457b3;
+        color: #fff1e6;
+        font-weight: 700;
+    }
+
+
+/*табилца*/
+h1, h2, p, table {
+    color: azure;
+}
+
+th, td, tr {
+    padding: 3px;
+}
+
+.name {
+    width: 40%;
+}
+
+table {
+    font-size: 25px;
+}
+
+
+.like, .otkaz {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin: 0;
+    border-radius: 80px;
+    cursor: pointer;
+    background-color: #ff8ad6;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #11111F;
+    font-weight: 700;
+    border: none;
+    font-size: 24px;
+}
+
+    .like:hover {
+        background-color: #e457b3;
+        color: #ffffff;
+    }
+
+    .otkaz:hover {
+        background-color: #e457b3;
+        color: #ffffff;
+    }
+
+.userAcc {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.what {
+    display: flex;
+    justify-content: space-around;
+    font-size: 34px;
+}
+
+.chats {
+    background-color: #ff8ad6;
+    color: #11111F;
+    border-radius: 80px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+.matches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.niz {
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+
+.bob, .city, .phone, .email {
+    color: #ff8ad6;
+}
+
+.INFO {
+    font-size: 24px;
+    padding-top:40px;
+}

@@ -1,0 +1,161 @@
+body{
+    background: #fff1e6;
+    max-width: 100%;
+    margin: 0;
+    background: #11111F;
+}
+
+.findBtn {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    background: #ffffff;
+    color: rgb(95, 0, 0);
+    font-weight: 800;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    font-family: 'Montserrat Alternates', sans-serif;
+    justify-content: center;
+    border: none;
+}
+
+.fu, .like {
+    width: 180px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: medium;
+    background: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Comfortaa', sans-serif;
+
+     
+    padding: 0px;
+    font-weight: 800;
+    font-size: 16px;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    font-family: 'Montserrat Alternates', sans-serif;
+    justify-content: center;
+    border: none;
+}
+
+.like {
+    background: #ff8ad6;
+    cursor: pointer;
+    color: #11111F;
+}
+
+    .like:hover {
+        background-color: #e457b3;
+        color: #fff1e6;
+        font-weight: 700;
+    }
+
+.containerr {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+.fam {
+    color: white;
+}
+
+.user_Card{
+    
+    background: #ff8ad6;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 20px;
+    
+    display: grid;
+      grid-template-columns: 1fr 1fr; /* Два столбца */
+      gap: 20px; /* Расстояние между ячейками */
+      padding: 20px; /* Внутренний отступ контейнера */
+      align-items: start;
+}
+
+/*.userImage{
+    width:100%;
+}
+
+img{
+    width:100%;
+    border-radius: 20px;
+    margin: 10px;
+}*/
+
+
+/*картинки*/
+.userImage {
+    width: 320px; /* Укажите желаемую ширину */
+    height: 420px; /* Укажите желаемую высоту */
+    margin: 20px 0 0 30px;
+    border-radius: 20px;
+    overflow: hidden; /* Скрываем выходящие за пределы круга части изображения */
+}
+
+    .userImage img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover; /* Сохраняем пропорции изображения и обрезаем его, чтобы оно полностью заполнило круг */
+    }
+
+
+.buttons{
+    align-items: end;
+    column-gap:18px;    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin:10px 0 10px 0;
+
+}
+
+
+
+
+
+.FIO{
+   
+   font-size: 28px;
+   font-weight: 900;
+   align-items: start;
+   color: #11111F;
+}
+
+.infoUser{
+    display: flex;
+    justify-content: left;
+    row-gap: 10px;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.ttt{
+    color:black;
+}
+
+.pol, .birth, .city {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 30px;
+}

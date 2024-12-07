@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"]</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;1,200&display=swap" rel="stylesheet">
+	@RenderSection("Styles", false)
+	<style>
+		.container {
+			display: flex;
+			justify-content: center;
+			column-gap: 10px;
+			font-size: 25px;
+			font-family: 'Montserrat Alternates', sans-serif;
+			padding: 20px 0 25px 0;
+			color: #ff8ad6;
+			background: #11111F;
+			font-weight: 900;
+		}
+		.a{
+			text-decoration:none;
+		}
+		.a:visited{
+			text-decoration: none;	
+			color: #ff8ad6;
+		}
+
+	</style>
+	<script src="~/scripts/jquery-3.7.1.min.js"></script>
+	<script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<a class="a" asp-action="Index" asp-controller="Home">Главная</a>
+		<a class="a" asp-action="MeetingPage" asp-controller="Meeting">@ViewBag.StartMeet</a>
+		<a class="a" asp-action="LoginPage" asp-controller="User">@ViewBag.Profile</a>
+		<a class="a" asp-action="Exit" asp-controller="User">@ViewBag.Exit</a>
+	</div>
+	<div>@RenderBody()</div>
+	@RenderSection("Scripts", false)
+</body>
+</html>

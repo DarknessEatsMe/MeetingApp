@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Вход";
+    ViewBag.Profile = null;
+    ViewBag.Exit = null;
+    ViewBag.StartMeet = null;
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+}
+    
+
+<body>
+    <form class="form" asp-action="LoginResult" asp-controller="User" class="form">
+        <div class="login">
+                <div class="login-header">
+                    <h1>Авторизация</h1>
+                </div>
+                <div class="login-form">
+                    <div class="form-group">
+                       
+                        <input type="text" name="Login" class="form-control" placeholder="Введите логин" />
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="password" name="Pass" class="form-control" placeholder="Введите пароль" />
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn" />
+                    </div>
+                </div>
+      
+
+                <div class="comm">
+                    <a  class="reg" asp-action="Register" asp-controller="User">Зарегистрироваться</a>
+                </div>
+
+            </div>
+        </form>
+</body>
+
+

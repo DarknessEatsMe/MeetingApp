@@ -1,0 +1,102 @@
+﻿@section Scripts {
+	<script src="~/scripts/getRndUser.js"></script>
+}
+@section Styles{
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/start.css">
+}
+@{
+	ViewBag.StartMeet = "";
+	ViewBag.Profile = "Профиль";
+	ViewBag.Exit = "Выйти";
+	ViewData["Title"] = "Начать знакомиться";
+
+
+}
+
+<button class="findBtn">Найти</button>
+
+<form asp-action="DoMatch" asp-controller="Meeting" id="meetingForm">
+	<input type="hidden" name="UserId" id="UserId"/>
+    <div class="containerr">
+        <div class="user_Card">
+            <div class="userImage">
+                <div class="oo">
+                    <img id="image" src="~/img/avatar.jpg" />
+                </div>
+            </div>
+           
+	            <div class="infoUser">
+                    <div class="FIO">
+		                <div id="userName" class="fam"></div>
+                    </div>
+
+                 <div class="info">
+		          <div class="pol">
+                        <p class="ttt">Пол: </p>
+                        <p class="sex" id="Sex"> </p>
+                  </div>
+
+                   <div class="birth">
+                       <p class="ttt">День рождения: </p>
+                       <p class="birth" id="birth"> </p>
+                   </div>
+
+                    <div class="city">
+                        <p class="ttt">Город: </p>
+                        <p class="birth" id="city"> </p>
+                    </div>
+                </div>
+
+
+                 <div class="about">
+                    <div id="descr">
+                        <p id="des"></p>
+                    </div>
+                </div>
+                   
+	            </div>
+           
+        </div>
+    </div>
+</form>
+@*
+
+<form asp-action="DoMatch" asp-controller="Meeting" id="meetingForm">
+    <input type="hidden" name="UserId" id="UserId" />
+    <div class="container">
+        <div class="user_Card">
+            <div class="userImage">
+                <div class="oo">
+                    <img src="~/img/Арина.jpg">
+                </div>
+            </div>
+
+            <div class="infoUser">
+                <div class="FIO">
+                    <div class="fam" id="fam"></div>
+                    <div class="name" id="name"></div>
+                </div>
+                <div class="info">
+                    <div class="sex" id="sex"><b class="ttt">Пол: </b></div>
+                    <div class="birth" id="birth"><b class="ttt">День рождения: </b></div>
+                    <div class="city" id="city"><b class="ttt">Город: </b> </div>
+                </div>
+                <div class="about">
+                    <div id="descr"><p></p></div>
+                    <div class="buttons">
+                        <button class="findBtn" style="display:none" id="RejectBtn">Отклонить</button>
+                        <button class="like" style="display:none" id="LikeBtn">Лайк</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>*@
+<div class="buttons">
+    <button style="display:none" id="RejectBtn" class="findBtn fu">Отклонить</button>
+    <button style="display:none" id="LikeBtn" class="like">Лайк</button>
+</div>
+

@@ -1,0 +1,76 @@
+﻿@using meetingApp.Models;
+@model meetingApp.UserPageViewModels.UserPageViewModel;
+@section Scripts {
+    <script src="~/scripts/changePage.js"></script>
+    <link rel="stylesheet" href="~/css/register.css">
+}
+@{
+	ViewData["Title"] = "Изменить данные";
+}
+
+
+<div class="flex">
+    
+    <form class="form" asp-action="ChangeInfo" asp-controller="User" asp-route-id="@Model.User?.IdUser" id="form" enctype="multipart/form-data">
+            <div class="col1">
+                <div class="choosePh">
+                    <input type="hidden" asp-for="@Model.User.IdUser" />
+                    <label for="file1">Выберите фото: </label>
+                    <input class="noStyle" type="file" id="file1" name="file1" accept="image/jpeg,image/png" /> <br /><br />
+                </div>
+                <div class="FIO">
+                    <input type="text" asp-for="@Model.User.SecName" placeholder="Введите фамилию" /> <br /><br />
+
+                    <input type="text" asp-for="@Model.User.Name" placeholder="Введите имя" /><br /><br />
+
+                    <input type="text" asp-for="@Model.User.FatherName" placeholder="Введите отчество" /><br /><br />
+                </div>
+                <div class="sex">
+                    <label asp-for="@Model.User.Sex">Пол: </label>
+                    <input type="hidden" asp-for="@Model.User.Sex" id="sexInp" maxlength="1" />
+                    <select class="select2" id="gender">
+                        <option value="М">Мужской</option>
+                        <option value="Ж">Женский</option>
+                    </select> 
+                </div>
+                
+            </div>
+            <div class="col1">
+                <div class="birth">
+                        <label asp-for="@Model.User.Birthday">День рождения</label>
+                    <input class="birthI" type="date" asp-for="@Model.User.Birthday" /><br /><br />
+                </div>
+                <div class="email">
+
+                    <input type="email" asp-for="@Model.User.Email" placeholder="Введите почту" /><br /><br />
+                </div>
+                <div class="phone">
+
+                    <input type="tel" asp-for="@Model.User.Phone" maxlength="12" placeholder="Введите почту" /><br />
+                </div>
+                
+                <input type="hidden" name="cityId" value="@Model.Adress.IdCity" id="cityInp" />
+                <div class="city">
+                    <label>Выберите город: </label>
+                    <select class="cityI" id="city">
+                        <option value="1">Ярославль</option>
+                        <option value="2">Москва</option>
+                        <option value="3">Кострома</option>
+                        <option value="4">Санкт-Петербург</option>
+                        <option value="5">Нижний-Новгород</option>
+                        <option value="6">Екатеринбург</option>
+                    </select> <br />
+                </div>
+                
+                <div class="about">                  
+                    <input type="hidden" name="descr" value="@Model.Description?.Decsr" id="des" />
+                    <textarea id="textarea" placeholder="измените данные о себе">@Model.Description?.Decsr</textarea> <br /><br />
+
+                </div>
+                <input type="submit" id="subm" value="Сохранить" />
+            </div>
+
+
+    
+</form>
+</div>

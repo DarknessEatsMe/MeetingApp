@@ -1,0 +1,55 @@
+﻿@using meetingApp.UserPageViewModels;
+@model meetingApp.UserPageViewModels.MessagesViewModels;
+@{
+    ViewData["Title"] = "Чат";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/showC.css">
+}
+    @section Scripts {
+    <script src="~/scripts/SendMsg.js"></script>
+}
+
+<div class="chat">
+        <h1>@Model.Chat.ChatName</h1>
+    <form asp-action="SendMsg" asp-controller="User" id="msgForm">
+        <input type="hidden" name="uId" value="@Model.User?.IdUser" />
+        <input type="hidden" name="chatId" value="@Model.Chat?.ChatId" />
+        <input class="send" type="hidden" name="message" />
+      <div class="messageB">
+                <textarea rows="1" id="textarea" placeholder="Type your message..."></textarea>
+           <input class="send" type="submit" value="Отправить" />
+
+      </div>
+       
+    </form>
+
+    <div class="ListM">
+        @foreach (Message msg in Model.Messages)
+        {
+            @if (Model.Users?.FirstOrDefault(u => u.IdUser == msg.IdUser)?.IdUser == Model.User?.IdUser)
+            {
+                <div class="messages one">
+                    <a>(@Model.Users?.FirstOrDefault(u => u.IdUser == msg.IdUser)?.Name)</a>
+                    <br />
+                    <span>@msg.Msg</span>
+                    <span class="dateT">(@msg.MsgDate)</span>
+                </div>
+            }
+            else
+            {
+                <div class="messages two">
+                    <a>(@Model.Users?.FirstOrDefault(u => u.IdUser == msg.IdUser)?.Name)</a>
+                    <br />
+                    <span>@msg.Msg</span>
+                    <span class="dateT">(@msg.MsgDate)</span>
+                </div>
+            }
+            <br />
+
+        }
+    </div>
+    
+</div>
+
+

@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Регистрация";
+    ViewBag.Profile = "Войти";
+    ViewBag.Exit = null;
+    ViewBag.StartMeet = null;
+}
+@section Scripts {
+    <script type="text/javascript" src="~/scripts/reg.js"></script>
+    <link rel="stylesheet" href="~/css/register.css">
+}
+
+@model meetingApp.Models.User;
+<div class="flex">
+        <form class="form" asp-action="Register" asp-controller="User" class="form" enctype="multipart/form-data">
+
+            <div class="col1">
+                <div class="choosePh">
+                    <label for="file1">Выберите фото: </label>
+                    <input class="noStyle" type="file" id="file1" name="file1" accept="image/jpeg,image/png"  /> <br /><br />
+                </div>
+              <div class="login">
+                    <div class="login1">
+                        <input class="req" type="text" name="Login" placeholder="Введите логин" /> <br /><br />
+
+                    </div>
+                    <div class="passw">
+                        <input class="req" type="password" name="Pass" id="Pass" placeholder="Введите пароль" /> <br /><br />
+                    </div>
+
+                    <div class="passw2">
+                        <input class="req" type="password" name="PassConf" id="PassConf" placeholder="Повторите пароль" /> <br /><br />
+                    </div>
+              </div>
+
+                <div class="login2">
+                    <div class="Fname">
+                        <input class="req" type="text" asp-for="SecName" placeholder="Введите фамилию" /> <br /><br />
+                    </div>
+
+                    <div class="name">
+                        <input class="req" type="text" asp-for="Name" placeholder="Введите имя" /><br /><br />
+                    </div>
+
+                    <div class="Oname">
+                        <input type="text" asp-for="FatherName" placeholder="Введите отчество" /><br /><br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col1">
+                <div class="sex">
+                    <label asp-for="Sex">Пол: </label>
+                    <input class="req" type="hidden" asp-for="Sex" id="sexInp" maxlength="1" />
+                </div>
+                <div class="gender">
+                    <select id="gender">
+                        <option value="М">Мужской</option>
+                        <option value="Ж">Женский</option>
+                    </select> <br /><br />
+                </div>
+                <div class="birth">
+                    <label asp-for="Birthday">День рождения</label>
+                    <input class="req" type="date" asp-for="Birthday" /><br /><br />
+                </div>
+
+                <div class="email">
+                    <input class="req" type="email" asp-for="Email" placeholder="Введите почту" /><br /><br />
+                </div>
+
+                <div class="phone">
+                    <input class="req" type="tel" asp-for="Phone" maxlength="12" placeholder="Введите номер телефона" /><br />
+                </div>
+
+                <input class="req" type="hidden" name="cityId" id="cityInp" />
+                <div class="city">
+                    <br />
+                    <label>Выберите город: </label>
+                    <select id="city">
+                        <option value="1">Ярославль</option>
+                        <option value="2">Москва</option>
+                        <option value="3">Кострома</option>
+                        <option value="4">Санкт-Петербург</option>
+                        <option value="5">Нижний-Новгород</option>
+                        <option value="6">Екатеринбург</option>
+                    </select>
+                </div>
+
+                <div class="about">
+                    <br />
+                    <input type="hidden" name="descr" id="des" />
+                    <textarea id="textarea" placeholder="Пару слов о себе..."></textarea> <br /><br />
+                </div>
+            </div>
+
+
+
+        </form>
+        <button id="btn">Зарегистрироваться</button>
+</div>
+
+    
+

@@ -1,0 +1,45 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 25px;
+    font-family: 'Comfortaa', sans-serif;
+    padding: 20px 0 25px 0;
+    color: #ff8ad6;
+    background: #11111F;
+    font-weight: 900;
+}
+
+body{
+    margin:0;
+    background: #11111F;
+}
+
+img{
+    width: 100%;
+}
+
+.main{
+   display: flex;
+   justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap:90px;
+}
+
+button{
+    font-family: 'Comfortaa', sans-serif;
+    border: none;
+    width: 700px;
+    height: 60px;
+    background-color: #ff8ad6;
+    border-radius: 80px;
+    font-size: 40px;
+    color:#ffffff;
+    cursor:pointer;
+}
+
+button:hover {
+    background: #e457b3;
+}
+

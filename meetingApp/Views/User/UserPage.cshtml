@@ -1,0 +1,99 @@
+﻿
+@using meetingApp.Models;
+@model meetingApp.UserPageViewModels.UserPageViewModel;
+@{
+	ViewData["Title"] = "Страница пользователя";
+	ViewBag.Profile = null;
+	ViewBag.Exit = "Выход";
+	ViewBag.StartMeet = "Начать знакомиться";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/user.css">
+}
+	<div class="userAcc">
+        
+        <div class="what">
+            <div class="round-image">
+                @if(Model.Photo != null) {
+                    <img class="img-responsive full-width" src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Photo.PhotoAdr)" />
+                }
+                else {
+                    <img src="~/img/Арина.jpg" />
+                }
+            </div>
+            <p>Страница пользователя @Model.User?.Name</p>
+            <p><a class="chats" asp-action="ChangeInfo" asp-controller="User" asp-route-id="@Model.User?.IdUser">Изменить данные</a></p>
+            <p><a class="chats" asp-action="Chats" asp-controller="User" asp-route-id="@Model.User?.IdUser">Ваши чаты</a></p>
+            
+        </div>
+
+       <div class="niz">
+        <div class="INFO">
+            <label  class="bob" for="dob"><b>Дата рождения:</b></label>
+            <p id="dob">@Convert.ToString(@Model.User?.Birthday)?.Substring(0,10)</p>
+            
+            <label class="city" for="city"><b>Город</b></label>
+            <p id="city">@Model.City?.Name</p>
+
+            <label class="phone" for="phone"><b>Телефон:</b></label>
+            <p id="phone">@Model.User?.Phone</p>
+
+            <label class="email" for="phone"><b>Почта:</b></label>
+            <p id="email">@Model.User?.Email</p>
+        </div>
+
+        <div class="matches">
+            <h2>Ваши лайки</h2>
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th>Имя пользователя</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+               @foreach(Match match in Model.Matches) {
+                    <tr>
+                       <td class="Name">@Model.Users?.FirstOrDefault(u => u.IdUser == match.IdUser2)?.Name</td>
+                        <td class="Status">@Model.Statuses?.FirstOrDefault(s => s.StatId == match.StatId)?.Status1</td>
+                        
+                    </tr>
+               }
+            </table class="table2">
+            <br />
+            <br />
+            <h2>Вас лайкнули</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя пользователя</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                 @foreach(Match myMatches in Model.MyMatches) {
+                    <tr>
+                        <td class="name">
+                          @Model.WhoLikeMe.FirstOrDefault(u => u.IdUser == myMatches.IdUser1).Name
+                         
+                        </td>
+                        <td class="button">
+                            <form asp-action="Like" asp-controller="Meeting">
+                                <input type="hidden" name="idMatch" value="@myMatches.IdMatch">
+                                <input class="like" type="submit" name="sbmt" value="Лайк">
+                            </form>
+                        </td>
+                        <td class="button">
+                            <form asp-action="Dislike" asp-controller="Meeting">
+                                <input type="hidden" name="idMatch" value="@myMatches.IdMatch">
+                                <input class="otkaz" type="submit" name="sbmt" value="Отказ">
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+       </div>
+        
+    
+      </div>
+

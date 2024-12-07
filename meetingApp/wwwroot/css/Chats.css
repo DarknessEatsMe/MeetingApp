@@ -1,0 +1,62 @@
+﻿body {
+    background: #fff1e6;
+    max-width: 100%;
+    margin: 0;
+    background: #11111F;
+    color: #ff8ad6;
+    font-family: 'Montserrat Alternates', sans-serif;
+   
+}
+
+.mesto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #ff8ad6;
+}
+
+a:hover {
+        color: #ff8ad6;
+
+}
+
+
+
+/*табилца*/
+
+th, td, tr {
+    padding: 15px;
+
+}
+
+
+.ChatName, .nameC {
+    color: azure;
+}
+
+
+table {
+    font-size: 35px;
+}
+
+.tabl{
+    display:flex;
+    justify-content:center;
+
+}
+
+.go {
+    background-color: #ff8ad6;
+    color: #11111F;
+    border-radius:80px;
+    padding: 9px;
+    font-weight:600;
+}
+.go:hover {
+    background-color: #e457b3;
+    color:azure;
+}

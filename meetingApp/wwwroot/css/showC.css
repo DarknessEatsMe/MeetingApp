@@ -1,0 +1,77 @@
+﻿body {
+    background: #fff1e6;
+    max-width: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding:20px;
+    background: #11111F;
+}
+
+.messages {
+    background-color: #FF8AD6;
+    border-radius:70px;
+    padding:20px;
+    color:#11111F;
+    font-weight: 700;
+    max-width:30%;
+    word-wrap: break-word;
+}
+
+.chat{
+    color: white;
+    font-size:24px;
+}
+
+.dateT {
+    color: #8a3e4c;
+}
+
+.send {
+    width: 50%;
+    height: 37px;
+    border-radius: 80px;
+}
+
+.one {
+    margin-left:800px;
+}
+
+#textarea {
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    margin-bottom: 20px;
+    font-size: 26px;
+    resize: vertical;
+}
+textarea {
+    resize: vertical;
+}
+
+.messageB {
+    display: flex;
+    align-items: center;
+    column-gap:10px;
+}
+.send{
+
+    font-family: 'Comfortaa', sans-serif;
+    border: none;
+    width: 300px;
+    height: 60px;
+    background-color: #ff8ad6;
+    border-radius: 80px;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    
+}
+
+    .send:hover {
+        background: #e457b3;
+    }
+
+.ListM {
+    display: flex;
+    flex-direction: column;
+}

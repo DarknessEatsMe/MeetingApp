@@ -1,0 +1,45 @@
+﻿@using meetingApp;
+@{
+    ViewData["Title"] = "Чаты";
+}
+@model meetingApp.UserPageViewModels.UserPageViewModel;
+@section Styles{
+    <link rel="stylesheet" href="~/css/chats.css">
+}
+<div class="mesto">
+     <h1>Список ваших чатов (@Model.User.Name)</h1>
+
+    <div class="tabl">
+        <table>
+            <thead>
+                <tr>
+                    <th class="nameC">Название чата</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Chats?.Any() == false)
+                {
+                    <tr>
+                        <td>Пусто :(</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (Chat c in Model.Chats)
+                    {
+                        <tr>
+                                
+                            <td class="ChatName">@c.ChatName</td>
+                            <td>
+                                <a class="go" asp-action="ShowChat" asp-controller="User" asp-route-id="@c.ChatId">Перейти к чату</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
